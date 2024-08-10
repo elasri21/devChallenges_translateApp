@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root {
+    --dark: #040612;
+    --input-bg: #222536;
+    --output-bg: #0F1523;
+    --active-lang-bg: #4D5562;
+    --translate-bg: #3762E4;
+    --grey: #4D5562;
+    --light-grey: #CDD5E0;
+    --very-light-grey: #F9FAFB;
+
+    --family: "DM Sans", sans-serif;
+    --bold-16: 16px;
+    --bold-14: 14px;
+    --medium-12: 12px;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body { 
+    background-color: var(--dark);
+    background-image: url("./assets/hero_img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--family);
+}
+button, input, select, textarea {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header {
+    width: fit-content;
+    margin: 60px auto;
+}
+@media (max-width: 375px) {
+    main {
+        margin-left: 20px !important;
+        margin-right: 20px !important;
+    }
+}
+main {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+@media (min-width: 922px) {
+    main > div {
+        width: calc(50% - 10px) !important;
+    }
+}
+main > div {
+    width: 100%;
+    border: 1px solid var(--light-grey);
+    border-radius: 20px;
+    padding: 20px 30px;
+}
+main .input-container {
+    background-color: var(--input-bg);
+    position: relative;
+}
+main > div .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--grey);
+}
+main > div .head p,
+main .head .langs button,
+main .head .langs select {
+    font-size: var(--bold-14);
+    font-weight: bold;
+    color: var(--grey);
+    text-transform: capitalize;
+}
+main .head .langs select {
+    padding: 8px 10px;
+}
+main .head .langs select.active {
+    background-color: var(--active-lang-bg);
+    color: var(--light-grey);
+    border-radius: 10px;
+}
+main .head .langs {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+main .head button {
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+main .head button.switcher {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    border: 2px solid var(--grey);
+}
+main .head .langs button.active {
+    background-color: var(--active-lang-bg);
+    color: var(--light-grey);
+}
+main textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    height: 150px;
+    padding: 20px 0;
+    font-size: var(--bold-16);
+    font-weight: bold;
+    color: var(--light-grey);
+}
+main textarea::placeholder {
+    transition: opacity .3s linear;
+}
+main textarea:focus::placeholder {
+    opacity: 0;
+}
+
+main .btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+main .btns .sound-copy {
+    display: flex;
+    gap: 10px;
+}
+main .btns .sound-copy button {
+    padding: 8px 10px;
+    border: 2px solid var(--grey);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+}
+main .btns .sound-copy button i {
+    font-size: var(--bold-16);
+    color: #49e849;
+    transition: .3s linear;
+}
+main .btns .translate-btn {
+    border: 2px solid var(--light-grey);
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: var(--bold-16);
+    font-weight: bold;
+    color: var(--light-grey);
+    background-color: var(--translate-bg);
+}
+main .length {
+    position: absolute;
+    bottom: 80px;
+    right: 35px;
+    font-size: var(--medium-12);
+    font-weight: 400;
+    color: var(--grey);
+}
+
+main .output-container {
+    background-color: var(--output-bg);
+}

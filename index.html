@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Translation App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="./assets/logo.svg" alt="">
+    </header>
+    <main>
+        <div class="input-container">
+            <div class="head">
+                <div class="langs">
+                    <p>Detect Language</p>
+                    <button class="active" data-lang="en">english</button>
+                    <button data-lang="fr">frensh</button>
+                    <select>
+                        <option value="en">english</option>
+                        <option value="fr">frensh</option>
+                        <option value="es">spanish</option>
+                        <option value="ar">arabic</option>
+                        <option value="zh">chinese</option>
+                        <option value="it">italian</option>
+                    </select>
+                </div>
+            </div>
+            <textarea placeholder="Type you text"></textarea>
+            <div class="length">
+                <span>0</span>/500
+            </div>
+            <div class="btns">
+                <div class="sound-copy">
+                    <button class="sound"><img src="./assets/sound_max_fill.svg" alt=""></button>
+                    <button class="copy"><img src="./assets/Copy.svg" alt=""></button>
+                </div>
+                <button class="translate-btn">
+                    <img src="./assets/Sort_alfa.svg" alt="">
+                    <span>Translate</span>
+                </button>
+            </div>
+        </div>
+        <div class="output-container">
+            <div class="head">
+                <div class="langs">
+                    <button data-lang="en">english</button>
+                    <button class="active" data-lang="fr">frensh</button>
+                    <select>
+                        <option value="fr">frensh</option>
+                        <option value="en">english</option>
+                        <option value="es">spanish</option>
+                        <option value="ar">arabic</option>
+                        <option value="zh">chinese</option>
+                        <option value="it">italian</option>
+                    </select>
+                </div>
+                <button class="switcher"><img src="./assets/Horizontal_top_left_main.svg" alt=""></button>
+            </div>
+            <textarea placeholder="Translation will be shown here"></textarea>
+            <div class="btns">
+                <div class="sound-copy">
+                    <button class="sound"><img src="./assets/sound_max_fill.svg" alt=""></button>
+                    <button class="copy"><img src="./assets/Copy.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
+
